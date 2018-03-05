@@ -366,6 +366,12 @@ header {
     border-bottom: 2px solid $white;
     color: $white;
     font-size: 2rem;
+    span {
+      display: block;
+      font-size: 1rem;
+      margin: 0 auto 1rem auto;
+      width: 75%;
+    }
   }
   #donate-rules {
     background: $yellow;
@@ -382,6 +388,10 @@ header {
         font-size: 1.2rem;
         list-style-type: none;
         margin-top: 1rem;
+        li {
+          margin: 0 auto 1rem auto;
+          width: 75%;
+        }
       }
       .small {
         font-size: 75%;
@@ -811,11 +821,11 @@ footer {
     }
     .socials {
       margin-top: 1rem;
-      i {
+      .footer-social {
         font-size: 2rem;
         margin-right: 1rem;
       }
-      i:hover {
+      .footer-social:hover {
         color: $darkblue;
       }
     }
