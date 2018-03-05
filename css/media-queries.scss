@@ -48,7 +48,7 @@
         width: 100%;
       }
       h3, i {
-        font-size: 3rem;
+        font-size: 1.5rem;
       }
       #group {
         margin: 1rem 0;
@@ -258,6 +258,7 @@
   }
   .contact {
     #contact-card {
+      border-radius: 0px;
       width: 100%;
       p {
         font-size: 1.25rem;
@@ -266,12 +267,14 @@
   }
   #find-container {
     #locate-address {
+      border-radius: 0px;
       width: 100%;
       p {
         font-size: 1.25rem;
       }
     }
     #locate-map {
+      border-radius: 0px;
       width: 100%;
     }
   }
