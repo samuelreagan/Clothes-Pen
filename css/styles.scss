@@ -1,0 +1,843 @@
+/** Sass - Variables **/
+$white: #fff;
+$blue: #0077b0;
+$darkblue: #003A56;
+$orange: #ff2800;
+$darkorange: #CC2000;
+$yellow: #ffbc00;
+
+/** Sass - MixIns **/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin background($attach, $image) {
+  background-attachment: $attach;
+  background-image: $image;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/** Sass - Inheritance **/
+%flexbox {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/** Global Styles **/
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+html,body {
+  font-size: 16px;
+}
+body {
+  background: $darkblue;
+}
+a {
+  text-decoration: none;
+}
+
+/** Header and Navigation **/
+header {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  .logo-container {
+    background: $blue;
+    border-bottom: 2px solid $white;
+    @extend %flexbox;
+    a {
+      display: block;
+      .logo {
+        display: block;
+        position: relative;
+        top: 1.5rem;
+        width: 7rem;
+      }
+    }
+    #openMenu {
+      display: none;
+      height: 25px;
+      left: 1rem;
+      position: absolute;
+      top: 2.5rem;
+      width: 20px;
+      .bar {
+        @include border-radius(2px);
+        background: $white;
+        height: 4px;
+        margin-bottom: 4px;
+        width: 100%;
+      }
+      .bar:last-child {
+        margin-bottom: none;
+      }
+    }
+    #mobile-overlay {
+      background: $orange;
+      color: $white;
+      height: 100vh;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      z-index: 1;
+      @extend %flexbox;
+      #closeMenu {
+        font-size: 2.5rem;
+        left: 0.8rem;
+        cursor: pointer;
+        position: absolute;
+        top: 0.6rem;
+      }
+      #mobile-nav {
+        flex: 1;
+        font-size: 2rem;
+        text-align: center;
+        a {
+          color: $white;
+          display: block;
+          padding: 5px;
+          white-space: nowrap;
+        }
+        a:hover {
+          background: $white;
+          color: $orange;
+        }
+      }
+    }
+  }
+  #desktop-nav {
+    align-items: center;
+    background: $orange;
+    border-bottom: 2px solid $white;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    a {
+      color: $white;
+      flex: 1;
+      padding: 5px;
+    }
+    a:hover {
+      background: $white;
+      color: $orange;
+    }
+
+  }
+}
+/** Main Content **/
+.container {
+  text-align: center;
+  //@extend %flexbox;
+}
+#jumbotron {
+  padding-bottom: 4rem;
+  h1 {
+    color: $white;
+    font-family: 'Chelsea Market', cursive;
+    font-size: 5rem;
+    font-weight: bold;
+    position: relative;
+    text-transform: uppercase;
+    top: 0.5rem;
+  }
+  #mission-statement {
+    background: $orange;//rgba(255,40,0,0.7);
+    border-top: 2px solid $white;
+    border-bottom: 2px solid $white;
+    color: $white;
+    margin: 1rem 0;
+    padding: 1.5rem 0 2.5rem 0;
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin: auto;
+      width: 75%;
+    }
+  }
+  #learn-more-btn {
+    background: $orange;
+    color: $white;
+    margin-top: 1.5rem;
+  }
+  #learn-more-btn:hover {
+    background: $white;
+    color: $orange;
+    transform: scale(1.1,1.1);
+  }
+  @include background(fixed,url("../images/clothespens.jpg"));
+}
+.btn {
+  border: none;
+  display: inline-block;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  @include border-radius(50px);
+}
+/** How to Help **/
+#how-to-help {
+  border-top: 2px solid $white;
+  height: 60vh;
+  @extend %flexbox;
+  .subsection {
+    height: 100%;
+    width: 33.3%;
+    @extend %flexbox;
+  }
+  #donate {
+    @include background(static, url("../images/donate.jpg"));
+    .btn {
+      background: $blue;
+      color: $white;
+    }
+    .btn:hover {
+      background: $white;
+      color: $blue;
+      transform: scale(1.1,1.1);
+    }
+  }
+  #message {
+    background: $orange;
+    color: $white;
+    flex-direction: column;
+    text-align: center;
+    p {
+      font-size: 1rem;
+    }
+    h3,  i {
+      font-size: 2rem;
+    }
+    #group {
+      margin: 1rem 0;
+    }
+    #text {
+      width: 75%;
+    }
+  }
+  #involved {
+    @include background(static,url("../images/get-involved.jpg"));
+    .btn {
+      background: $yellow;
+      color: $white;
+    }
+    .btn:hover {
+      background: $white;
+      color: $yellow;
+      transform: scale(1.1,1.1);
+    }
+  }
+}
+
+/** About Page **/
+#our-mission {
+  background: $blue;
+  color: $white;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  @include background(static, url("../images/blue-background.png"));
+  h1 {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 4rem;
+  }
+  p {
+    margin: 1rem auto 1rem auto;
+    width: 75%;
+  }
+}
+#upcoming-events {
+  background: $orange;
+  border-top: 2px solid $white;
+  width: 100%;
+  h3 {
+    background: $white;
+    border-bottom: 2px solid $orange;
+    color: $orange;
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  .event-container {
+    color: $white;
+    font-size: 2rem;
+    text-align: center;
+    h2 {
+      margin: 0.5rem 0;
+    }
+    p {
+      font-size: 1rem;
+      margin: auto;
+      width: 75%;
+    }
+    .btn {
+      background: $white;
+      border: 2px solid $white;
+      color: $orange;
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+    }
+    .btn:hover {
+      background: $orange;
+      color: $white;
+      transform: scale(1.1, 1.1);
+    }
+  }
+}
+#past-events {
+  color: $white;
+  height: 40vh;
+  text-align: center;
+  width: 100%;
+  .event-container {
+    height: 100%;
+    width: 33.3333%;
+    @extend %flexbox;
+    .inner-text {
+      background: $orange;
+      border-top: 2px solid $white;
+      border-bottom: 2px solid $white;
+      overflow: hidden;
+      width: 100%;
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        height: 0px;
+      }
+    }
+  }
+  .event-container:hover p{
+    height: 75px;
+  }
+  .event-container:nth-child(1) {
+    @include background(static, url("../images/past-event-1.jpg"));
+  }
+  .event-container:nth-child(2) {
+    @include background(static, url("../images/past-event-2.jpg"));
+  }
+  .event-container:nth-child(3) {
+    @include background(static, url("../images/past-event-3.jpg"));
+  }
+  @extend %flexbox;
+}
+/** How to Help Page**/
+#help-intro {
+  color: $white;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  @include background(static, url("../images/blue-background.png"));
+  h1 {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1rem;
+    margin: auto;
+    width: 75%;
+  }
+}
+#donate-sect {
+  background: $white;
+  color: $yellow;
+  font-size: 2rem;
+  text-align: center;
+  h3 {
+    background: $yellow;
+    border-bottom: 2px solid $white;
+    color: $white;
+    font-size: 2rem;
+  }
+  #donate-rules {
+    background: $yellow;
+    color: $white;
+    @extend %flexbox;
+    .rules-container {
+      min-height: 50vh;
+      padding: 1rem;
+      width: 50%;
+      p > i {
+        font-size: 4rem;
+      }
+      ul {
+        font-size: 1.2rem;
+        list-style-type: none;
+        margin-top: 1rem;
+      }
+      .small {
+        font-size: 75%;
+      }
+    }
+  }
+  #dnt-btn-contianer {
+    background: $yellow;
+    border-bottom: 2px solid $white;
+    padding-bottom: 1rem;
+    width: 100%;
+    #dnt-btn {
+      background: $white;
+      border: 2px solid $yellow;
+      color: $yellow;
+    }
+    #dnt-btn:hover {
+      background: $yellow;
+      border: 2px solid $white;
+      color: $white;
+    }
+  }
+}
+#shop-sect {
+  background: $white;
+  color: $orange;
+  font-size: 2rem;
+  text-align: center;
+  #find-us {
+    min-height: 50vh;
+    @extend %flexbox;
+    @include background(static, url("../images/store.jpg"));
+    #find-btn {
+      background: $white;
+      border: 2px solid $orange;
+      color: $orange;
+      padding: 0.5rem 2rem;
+    }
+    #find-btn:hover {
+      background: $orange;
+      color: $white;
+      transform: scale(1.1, 1.1);
+    }
+  }
+}
+/** Get Involved Page **/
+#involved-intro {
+  color: $white;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  @include background(static, url("../images/blue-background.png"));
+  h1 {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1rem;
+    margin: auto;
+    width: 75%;
+  }
+}
+#volunteer {
+  background: $white;
+  border-top: 2px solid $white;
+  color: $yellow;
+  font-size: 2rem;
+  text-align: center;
+  #upcoming-evt {
+    background: $white;
+    height: 50vh;
+    @extend %flexbox;
+    .evt-sect {
+      background: $blue;
+      color: $white;
+      height: 100%;
+      width: 33.33%;
+      h4 {
+        background: $yellow;
+        border-bottom: 2px solid $white;
+        border-top: 2px solid $white;
+      }
+      p {
+        background: $yellow;
+        margin: 1.5rem 0 0 0;
+        height: 0;
+        overflow: hidden;
+        font-size: 1rem;
+      }
+      .progress-bar {
+        background-color: $white;
+        height: 30px;
+        margin: 1.5rem auto;
+        width: 80%;
+        @include border-radius(15px);
+        .progress {
+          background: $yellow;
+          border: 2px solid $white;
+          height: 100%;
+          font-size: 1rem;
+          text-align: left;
+          padding-left: 0.5rem;
+          width: 75%;
+          @include border-radius(15px);
+        }
+      }
+      .vol-need {
+        background: $white;
+        color: $yellow;
+        display: inline-block;
+        font-size: 1rem;
+        padding: 0.5rem;
+        @include border-radius(25px);
+      }
+      .vol-need:hover {
+        background: $yellow;
+        color: $white;
+      }
+    }
+    .evt-sect:hover p {
+      height: 80px;
+    }
+    .evt-sect:nth-child(1) {
+      @include background(static, url("../images/blankets.jpg"));
+    }
+    .evt-sect:nth-child(2) {
+      @include background(static, url("../images/backpacks.jpg"));
+    }
+    .evt-sect:nth-child(2) .progress {
+      width: 50%;
+    }
+    .evt-sect:nth-child(3) {
+      @include background(static, url("../images/books.jpg"));
+    }
+    .evt-sect:nth-child(3) .progress {
+      width: 25%;
+    }
+  }
+}
+#careers {
+  background: $white;
+  border-top: 2px solid $white;
+  border-bottom: 2px solid $white;
+  color: $orange;
+  font-size: 2rem;
+  text-align: center;
+  #career-sect {
+    align-content: flex-start;
+    display: flex;
+    height: auto;
+    h4 {
+      background: $orange;
+      border-bottom: 2px solid $white;
+      border-top: 2px solid $white;
+      color: $white;
+    }
+    p {
+      color: $white;
+      font-size: 0.85rem;
+      text-align: justify;
+      margin: auto;
+      width: 70%;
+    }
+    #positions {
+      background: $orange;
+      padding-bottom: 1rem;
+      height: 100%;
+      width: 66.66%;
+      .job-title {
+        background: $orange;
+        border-bottom: 2px solid $white;
+        color: $white;
+        display: inline-block;
+        font-size: 1.5rem;
+        margin: 0.5rem;
+        padding: 0.25rem 1.5rem;
+      }
+    }
+    #career-info {
+      height: 100%;
+      width: 33.33%;
+      p {
+        color: $orange;
+        font-size: 0.85rem;
+        margin: 1rem auto 0 auto;
+        width: 80%;
+      }
+      .btn {
+        background: $orange;
+        border: 2px solid $white;
+        color: $white;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+      .btn:hover {
+        background: $white;
+        border: 2px solid $orange;
+        color: $orange;
+      }
+    }
+  }
+}
+/** Get in Touch **/
+#contact-intro {
+  color: $white;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  @include background(static, url("../images/blue-background.png"));
+  h1 {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1rem;
+    margin: auto;
+    width: 75%;
+  }
+}
+.contact {
+  background: $yellow;
+  padding-bottom: 1rem;
+  min-height: 50vh;
+  h2 {
+    background: $white;
+    color: $yellow;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  #contact-card {
+    background: $white;
+    color: $yellow;
+    margin: 1rem auto 0 auto;
+    min-height: 40vh;
+    padding: 1rem;
+    text-align: center;
+    width: 65%;
+    @include border-radius(10px);
+    p {
+      background: $yellow;
+      color: $white;
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+      @include border-radius(10px);
+    }
+    p:first-child {
+      background: transparent;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+    p > a {
+      color: $white;
+    }
+    p > #contact-logo {
+      width: 5rem;
+    }
+    #contact-social {
+      font-size: 3rem;
+    }
+    #contact-social > a:nth-child(2) {
+      margin: 0 2rem;
+    }
+  }
+}
+#find-container {
+  background: $orange;
+  h2 {
+    color: $orange;
+  }
+  #locate-address {
+    background: $white;
+    color: $orange;
+    margin: 1rem auto 0 auto;
+    padding: 1rem;
+    text-align: center;
+    width: 65%;
+    @include border-radius(10px);
+    p {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+  #locate-map {
+    background: $white;
+    margin: 1rem auto 0 auto;
+    min-height: 40vh;
+    padding: 1rem;
+    text-align: center;
+    width: 65%;
+    @include border-radius(10px);
+    iframe {
+      margin: auto;
+      width: 100%;
+      @include border-radius(10px);
+    }
+  }
+}
+/** Event Page **/
+.banner {
+  flex-direction: column;
+  min-height: 50vh;
+  @extend %flexbox;
+  @include background(fixed, url("../images/blankets.jpg"));
+  h2 {
+    background: $yellow;
+    border-bottom: 2px solid $white;
+    border-top: 2px solid $white;
+    color: $white;
+    font-family: 'Chelsea Market', cursive;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+  .evt-progress-bar {
+    background: $white;
+    height: 30px;
+    width: 65%;
+    @include border-radius(15px);
+    .evt-progress {
+      background: $yellow;
+      border: 2px solid $white;
+      color: $white;
+      height: 100%;
+      font-size: 1rem;
+      text-align: left;
+      padding-left: 0.5rem;
+      width: 75%;
+      @include border-radius(15px);
+    }
+  }
+}
+.event-info {
+  background: $yellow;
+  border-top: 2px solid $white;
+  color: $white;
+  min-height: 50vh;
+  padding: 1rem;
+  width: 100%;
+  .event-container {
+    margin: auto;
+    width: 65%;
+    .evt-description {
+      margin-bottom: 1rem;
+      text-align: center;
+      .bold {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 0.5rem;
+      }
+    }
+    .evt-time {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      .bold {
+        font-weight: bold;
+      }
+    }
+    .sign-up {
+      width: 100%;
+      input {
+        border: none;
+        color: $yellow;
+        display: block;
+        font-size: 1rem;
+        height: 50px;
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 100%;
+        @include border-radius(25px);
+      }
+      #submit {
+        border: 2px solid $yellow;
+        color: $yellow;
+        display: block;
+        font-size: 2rem;
+        margin: auto;
+      }
+      #submit:hover {
+        background: $yellow;
+        border: 2px solid $white;
+        color: $white;
+        cursor: pointer;
+        display: block;
+        font-size: 2rem;
+        margin: auto;
+      }
+    }
+
+  }
+}
+#backpack-banner {
+  @include background(fixed, url("../images/backpacks.jpg"));
+}
+#blanket-banner {
+  @include background(fixed, url("../images/blankets.jpg"));
+}
+#book-banner {
+  @include background(fixed, url("../images/books.jpg"));
+}
+/** Footer **/
+footer {
+  background: $blue;
+  border-top: 2px solid $white;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  @extend %flexbox;
+  .footer-section {
+    color: $white;
+    height: 100%;
+    width: 100%;
+    @extend %flexbox;
+  }
+  a {
+    color: $white;
+  }
+  a:hover {
+    color: $darkblue;
+  }
+  #footer-contact {
+    .bold {
+      font-weight: bold;
+    }
+    .socials {
+      margin-top: 1rem;
+      i {
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+      i:hover {
+        color: $darkblue;
+      }
+    }
+  }
+  #footer-copy {
+    text-align: center;
+    .logo {
+      width: 4rem;
+    }
+    #copyright {
+      color: $white;
+      font-size: 0.75rem;
+      margin-top: 1rem;
+    }
+  }
+  #footer-menu {
+    text-align: center;
+    a {
+      display: block;
+      margin: 0.2rem;
+    }
+  }
+}
+/** Importing Media Queries **/
+@import 'media-queries';
