@@ -384,35 +384,55 @@ header {
         display: block;
         margin: auto;
         max-width: 550px;
+        .pie-piece {
+          
+        }
       }
     }
     #spending-descriptions {
-      padding: 1rem;
       width: 50%;
       p {
-        margin-bottom: 0.5rem;
+        //background: green;
+        //color: $white;
+        padding: 0.5rem;
         .category {
+          color: $white;
+          padding: 0.2rem;
           font-size: 1.1rem;
           font-weight: bold;
+          margin-right: 0.5rem;
+          @include border-radius(3px);
         }
-      }
-      p:last-child {
-        margin-bottom: 0;
       }
       #charity-spending {
         color: $orange;
+        .category {
+          background-color: $orange;
+        }
       }
       #fundraising-spending {
         color: $yellow;
+        .category {
+          background-color: $yellow;
+        }
       }
       #outreach-spending {
         color: $darkblue;
+        .category {
+          background-color: $darkblue;
+        }
       }
       #salary-spending {
         color: $blue;
+        .category {
+          background-color: $blue;
+        }
       }
       #bills-spending {
         color: $darkorange;
+        .category {
+          background-color: $darkorange;
+        }
       }
     }
   }
