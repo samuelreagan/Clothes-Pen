@@ -321,6 +321,7 @@ header {
         font-size: 2rem;
       }
       p {
+        font-size: 1rem;
         height: 0px;
       }
     }
@@ -341,8 +342,21 @@ header {
 }
 #revenue {
   background: $orange;
+  border-top: 2px solid $white;
   padding-bottom: 1rem;
-  h2 {
+  #revenue-header {
+    background: $orange;
+    color: $white;
+    padding: 1rem;
+    text-align: center;
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      margin-top: 0.5rem;
+    }
+  }
+  h3 {
     background: $white;
     border-bottom: 2px solid $orange;
     color: $orange;
@@ -367,7 +381,7 @@ header {
 }
 #spending {
   background: $white;
-  h2 {
+  h3 {
     background: $white;
     border-bottom: 2px solid $orange;
     color: $orange;
@@ -384,8 +398,14 @@ header {
         display: block;
         margin: auto;
         max-width: 550px;
+        .st0{fill:none;stroke:#FDBB2B;stroke-width:2;stroke-miterlimit:10;}
+        .st1{fill:#003A56;}
+        .st2{fill:#CC2000;}
+        .st3{fill:#FDBB2B;}
+        .st4{fill:#1078AE;}
+        .st5{fill:#FC2C1B;}
         .pie-piece {
-          
+
         }
       }
     }
