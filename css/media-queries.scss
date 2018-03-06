@@ -96,6 +96,21 @@
       }
     }
   }
+  #spending {
+    #spending-container {
+      flex-direction: column;
+      #piechart-container {
+        padding-bottom: 0;
+        width: 100%;
+        #piechart {
+
+        }
+      }
+      #spending-descriptions {
+        width: 100%;
+      }
+    }
+  }
   /** How to Help Page **/
   #help-intro {
     font-size: 1.5rem;

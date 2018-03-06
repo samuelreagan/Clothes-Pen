@@ -339,6 +339,84 @@ header {
   }
   @extend %flexbox;
 }
+#revenue {
+  background: $orange;
+  padding-bottom: 1rem;
+  h2 {
+    background: $white;
+    border-bottom: 2px solid $orange;
+    color: $orange;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  .revenue-text {
+    color: $white;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    .bold {
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+  }
+  .revenue-text:last-child {
+    margin-bottom: 0;
+  }
+}
+#spending {
+  background: $white;
+  h2 {
+    background: $white;
+    border-bottom: 2px solid $orange;
+    color: $orange;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  #spending-container {
+    @extend %flexbox;
+    #piechart-container {
+      padding: 0.5rem 0;
+      width: 50%;
+      #piechart {
+        display: block;
+        margin: auto;
+        max-width: 550px;
+      }
+    }
+    #spending-descriptions {
+      padding: 1rem;
+      width: 50%;
+      p {
+        margin-bottom: 0.5rem;
+        .category {
+          font-size: 1.1rem;
+          font-weight: bold;
+        }
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+      #charity-spending {
+        color: $orange;
+      }
+      #fundraising-spending {
+        color: $yellow;
+      }
+      #outreach-spending {
+        color: $darkblue;
+      }
+      #salary-spending {
+        color: $blue;
+      }
+      #bills-spending {
+        color: $darkorange;
+      }
+    }
+  }
+}
 /** How to Help Page**/
 #help-intro {
   color: $white;
