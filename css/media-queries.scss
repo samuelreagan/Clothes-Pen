@@ -213,6 +213,10 @@
   }
   footer {
     flex-direction: column;
+    .footer-section {
+      background: red;
+      height: 33.3%;
+    }
     #footer-contact {
       text-align: center;
       .socials {
@@ -293,10 +297,7 @@
   footer {
     min-height: 40vh;
     #footer-copy {
-      bottom: 0;
       height: auto;
-      margin-top: 2rem;
-      position: relative;
     }
   }
 }

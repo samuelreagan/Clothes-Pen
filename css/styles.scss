@@ -476,6 +476,8 @@ header {
       }
       p {
         background: $yellow;
+        border-top: 2px solid $white;
+        border-bottom: 2px solid $white;
         margin: 1.5rem 0 0 0;
         height: 0;
         overflow: hidden;
@@ -624,6 +626,7 @@ header {
   #contact-card {
     background: $white;
     color: $yellow;
+    height: auto;
     margin: 1rem auto 0 auto;
     min-height: 40vh;
     padding: 1rem;
@@ -677,6 +680,7 @@ header {
   }
   #locate-map {
     background: $white;
+    height: auto;
     margin: 1rem auto 0 auto;
     min-height: 40vh;
     padding: 1rem;
@@ -831,6 +835,7 @@ footer {
     }
   }
   #footer-copy {
+    background: red;
     text-align: center;
     .logo {
       width: 4rem;
