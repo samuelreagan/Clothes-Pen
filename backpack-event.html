@@ -70,14 +70,15 @@
           donation booths setup across the area and deliver all donations
           collected throughout the day to our headquarters. We'll take care of
           getting these school supplies to the children who need them.
-          <span class="bold">5 More Volunteers Needed!</span>
+          <span id="vol-number" class="bold">5 More Volunteers Needed!</span>
         </p>
-        <form class="sign-up" action="#">
-          <input type="text" placeholder="Name" required>
-          <input type="text" placeholder="Phone Number" required>
-          <input type="text" placeholder="Email" required>
+        <form class="sign-up" method="post" action="javascript:submit();">
+          <input id="name" type="text" placeholder="Name" required>
+          <input id="phone" type="text" placeholder="Phone Number" required>
+          <input id="email" type="text" placeholder="Email" required>
           <button type="submit" class="btn" id="submit">Submit</button>
         </form>
+        <p id="hidden-text"></p>
       </div>
     </div>
   </main>
@@ -116,5 +117,6 @@
     </div>
   </footer>
   <script src="js/main.js"></script>
+  <script src="js/submitBackpack.js"></script>
 </body>
 </html>

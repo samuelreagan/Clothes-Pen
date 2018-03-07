@@ -914,7 +914,12 @@ header {
         margin: auto;
       }
     }
-
+    #hidden-text {
+      display: none;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
   }
 }
 #backpack-banner {
