@@ -359,7 +359,7 @@
       border-radius: 0px;
       width: 100%;
       p {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -368,12 +368,15 @@
       border-radius: 0px;
       width: 100%;
       p {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
       }
     }
     #locate-map {
       border-radius: 0px;
       width: 100%;
+      iframe {
+        height: 15rem;
+      }
     }
   }
   .banner {
