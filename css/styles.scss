@@ -914,6 +914,88 @@ header {
 #book-banner {
   @include background(fixed, url("../images/books.jpg"));
 }
+/** Credits Page **/
+#credits-intro {
+  color: $white;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  @include background(static, url("../images/blue-background.png"));
+  h1 {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1rem;
+    margin: auto;
+    width: 75%;
+  }
+}
+#credits-container {
+  border-top: 2px solid $white;
+  flex-wrap: wrap;
+  @extend %flexbox;
+  .credit {
+    text-align: center;
+    width: 33.3%;
+    h2 {
+      background: $orange;
+      border-bottom: 2px solid $white;
+      color: $white;
+      font-size: 2rem;
+      padding: 1rem 0;
+      .small {
+        display: block;
+        font-size: 0.75rem;
+      }
+    }
+    a {
+      background: $white;
+      color: $yellow;
+      display: block;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+    }
+    a:hover {
+      background: $yellow;
+      color: $white;
+    }
+    .img{
+      height: 20rem;
+      width: 100%;
+    }
+    #clothespen-credit {
+      @include background(static, url("../images/clothespens-sm.jpg"));
+    }
+    #jeans-credit {
+      @include background(static, url("../images/donate.jpg"));
+    }
+    #fistbump-credit {
+      @include background(static, url("../images/get-involved.jpg"));
+    }
+    #picnic-credit {
+      @include background(static, url("../images/past-event-1.jpg"));
+    }
+    #shoes-credit {
+      @include background(static, url("../images/past-event-2.jpg"));
+    }
+    #fireworks-credit {
+      @include background(static, url("../images/past-event-3.jpg"));
+    }
+    #store-credit {
+      @include background(static, url("../images/store.jpg"));
+    }
+    #blanket-credit {
+      @include background(static, url("../images/blankets.jpg"));
+    }
+    #backpack-credit {
+      @include background(static, url("../images/backpacks.jpg"));
+    }
+    #books-credit {
+      @include background(static, url("../images/books.jpg"));
+    }
+  }
+}
 /** Footer **/
 footer {
   background: $blue;

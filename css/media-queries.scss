@@ -253,6 +253,18 @@
       }
     }
   }
+  #credits-intro {
+    h1 {
+      font-size: 3rem;
+      padding: 1rem 0;
+    }
+  }
+  #credits-container {
+    flex-direction: column;
+    .credit {
+      width: 100%;
+    }
+  }
   footer {
     flex-direction: column;
     .footer-section {
