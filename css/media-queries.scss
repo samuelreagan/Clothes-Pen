@@ -93,6 +93,7 @@
       .inner-text {
         p {
           height: 75px;
+          padding: 0 1rem;
         }
       }
     }
@@ -271,11 +272,12 @@
   footer {
     flex-direction: column;
     .footer-section {
-      height: 33.3%;
+      height: auto;
     }
     #footer-contact {
       text-align: center;
       .socials {
+        margin-bottom: 1rem;
         margin-right: 0;
       }
     }
@@ -284,7 +286,7 @@
         display: none;
       }
       #copyright {
-        margin-top: 1rem;
+        margin-top: 0;
       }
     }
     #footer-menu {

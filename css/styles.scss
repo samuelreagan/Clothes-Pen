@@ -1026,6 +1026,7 @@ footer {
     color: $darkblue;
   }
   #footer-contact {
+    background: green;
     .bold {
       font-weight: bold;
     }
@@ -1041,6 +1042,7 @@ footer {
     }
   }
   #footer-copy {
+    background: purple;
     text-align: center;
     .logo {
       width: 4rem;
@@ -1052,6 +1054,7 @@ footer {
     }
   }
   #footer-menu {
+    background: pink;
     text-align: center;
     a {
       display: block;
