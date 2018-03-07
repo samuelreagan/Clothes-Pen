@@ -173,11 +173,13 @@
       .evt-sect {
         height: 33.33%;
         padding-bottom: 1rem;
+        pointer-events: none;
         width: 100%;
         p {
           border-top: 2px solid white;
           border-bottom: 2px solid white;
-          height: 5rem;
+          height: auto;
+          padding: 0.5rem 1rem;
         }
       }
     }

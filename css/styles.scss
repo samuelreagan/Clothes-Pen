@@ -577,7 +577,7 @@ header {
   text-align: center;
   #upcoming-evt {
     background: $white;
-    height: 50vh;
+    height: 20rem;
     @extend %flexbox;
     .evt-sect {
       background: $blue;
@@ -592,7 +592,7 @@ header {
       p {
         background: $yellow;
         margin: 1.5rem 0 0 0;
-        height: 0;
+        height: 0px;
         overflow: hidden;
         font-size: 1rem;
       }
@@ -629,7 +629,8 @@ header {
     .evt-sect:hover p {
       border-top: 2px solid $white;
       border-bottom: 2px solid $white;
-      height: 80px;
+      height: 90px;
+      padding: 0.5rem 0;
     }
     .evt-sect:nth-child(1) {
       @include background(static, url("../images/blankets.jpg"));
@@ -1026,7 +1027,6 @@ footer {
     color: $darkblue;
   }
   #footer-contact {
-    background: green;
     .bold {
       font-weight: bold;
     }
@@ -1042,7 +1042,6 @@ footer {
     }
   }
   #footer-copy {
-    background: purple;
     text-align: center;
     .logo {
       width: 4rem;
@@ -1054,7 +1053,6 @@ footer {
     }
   }
   #footer-menu {
-    background: pink;
     text-align: center;
     a {
       display: block;
