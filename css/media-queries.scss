@@ -188,9 +188,8 @@
       flex-direction: column;
       height: auto;
       .evt-sect {
-        height: 33.33%;
+        height: auto;
         padding-bottom: 1rem;
-        //pointer-events: none;
         width: 100%;
         p {
           border-top: 2px solid white;
