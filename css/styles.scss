@@ -915,10 +915,14 @@ header {
       }
     }
     #hidden-text {
+      background-color: $white;
+      color: $yellow;
       display: none;
       font-size: 1.5rem;
       margin-top: 1rem;
+      padding: 1rem;
       text-align: center;
+      @include border-radius(25px);
     }
   }
 }

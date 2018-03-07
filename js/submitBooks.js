@@ -25,7 +25,7 @@ function submit() {
       textValue.textContent = volunteersNeeded + " More Volunteers Needed!";
     }
     //Update Text in the Webpage
-    hiddenMessage.textContent = "Thank you for volunteering to help us with our cause, " + name + "! A Clothes Pen representative will contact you soon to get all the information you need!";
+    hiddenMessage.textContent = "Thank you for volunteering to help us with our cause, " + name + "! A Clothes Pen representative will contact you soon to get you all the information you need!";
     hiddenMessage.style.display = "block";
   }
   //If there aren't volunteers needed.
