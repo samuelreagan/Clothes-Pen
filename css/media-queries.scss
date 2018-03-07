@@ -13,6 +13,16 @@
       }
     }
   }
+  #careers {
+    #career-sect {
+      #career-info {
+        .btn {
+          font-size: 1.45rem;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
 }
 
 /** Tablets - 768px **/
@@ -108,9 +118,10 @@
     .event-container {
       width: 100%;
       .inner-text {
+        padding-top: 0.5rem;
         p {
-          height: 75px;
-          padding: 0 1rem;
+          height: auto;
+          padding: 0 1rem 1rem 1rem;
         }
       }
     }
@@ -322,7 +333,7 @@
   #jumbotron {
     #mission-statement {
       p {
-        font-size: 0.8rem;
+        font-size: 1rem;
       }
     }
   }
@@ -365,6 +376,11 @@
       width: 100%;
     }
   }
+  .banner {
+    h2 {
+      font-size: 2rem;
+    }
+  }
   .event-info {
     .event-container {
       .evt-time {
@@ -374,6 +390,13 @@
         .bold {
           font-size: 1.1rem;
         }
+      }
+    }
+  }
+  #credits-container {
+    .credit {
+      .img {
+        height: 15rem;
       }
     }
   }

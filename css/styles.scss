@@ -655,7 +655,6 @@ header {
 #careers {
   background: $white;
   border-top: 2px solid $white;
-  border-bottom: 2px solid $white;
   color: $orange;
   font-size: 2rem;
   text-align: center;
@@ -666,7 +665,6 @@ header {
     h4 {
       background: $orange;
       border-bottom: 2px solid $white;
-      border-top: 2px solid $white;
       color: $white;
     }
     p {
@@ -816,7 +814,7 @@ header {
 /** Event Page **/
 .banner {
   flex-direction: column;
-  min-height: 50vh;
+  min-height: 30rem;
   @extend %flexbox;
   @include background(fixed, url("../images/blankets.jpg"));
   h2 {
@@ -826,7 +824,8 @@ header {
     color: $white;
     font-family: 'Chelsea Market', cursive;
     font-size: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    padding: 0.5rem 0;
     text-align: center;
     width: 100%;
   }
