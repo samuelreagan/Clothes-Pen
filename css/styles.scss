@@ -515,7 +515,6 @@ header {
   }
   #dnt-btn-contianer {
     background: $yellow;
-    border-bottom: 2px solid $white;
     padding-bottom: 1rem;
     width: 100%;
     #dnt-btn {
@@ -535,8 +534,11 @@ header {
   color: $orange;
   font-size: 2rem;
   text-align: center;
+  h2 {
+    border-bottom: 2px solid $orange;
+  }
   #find-us {
-    min-height: 50vh;
+    height: 20rem;
     @extend %flexbox;
     @include background(static, url("../images/store.jpg"));
     #find-btn {
@@ -578,6 +580,7 @@ header {
   #upcoming-evt {
     background: $white;
     height: 20rem;
+    overflow: hidden;
     @extend %flexbox;
     .evt-sect {
       background: $blue;
