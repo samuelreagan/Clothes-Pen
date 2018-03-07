@@ -115,6 +115,26 @@
       }
       #spending-descriptions {
         width: 100%;
+        #charity-spending {
+          background: #ff2800;
+          color: #fff;
+        }
+        #fundraising-spending {
+          background: #ffbc00;
+          color: #fff;
+        }
+        #outreach-spending {
+          background: #003A56;
+          color: #fff;
+        }
+        #salary-spending {
+          background: #0077b0;
+          color: #fff;
+        }
+        #bills-spending {
+          background: #CC2000;
+          color: #fff;
+        }
       }
     }
   }
