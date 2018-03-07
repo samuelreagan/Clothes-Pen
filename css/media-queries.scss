@@ -1,3 +1,20 @@
+/** Small Laptops and Large Tablets - 1150px **/
+@media only screen and (max-width: 1150px) {
+  #volunteer {
+    #upcoming-evt {
+      height: 23rem;
+      .evt-sect {
+        p {
+
+        }
+      }
+      .evt-sect:hover p {
+        height: 140px;
+      }
+    }
+  }
+}
+
 /** Tablets - 768px **/
 @media only screen and (max-width: 768px) {
   header {
@@ -173,7 +190,7 @@
       .evt-sect {
         height: 33.33%;
         padding-bottom: 1rem;
-        pointer-events: none;
+        //pointer-events: none;
         width: 100%;
         p {
           border-top: 2px solid white;
@@ -181,6 +198,10 @@
           height: auto;
           padding: 0.5rem 1rem;
         }
+      }
+      .evt-sect:hover p {
+        height: auto;
+        padding: 0.5rem 1rem;
       }
     }
   }
