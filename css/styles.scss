@@ -142,7 +142,6 @@ header {
 /** Main Content **/
 .container {
   text-align: center;
-  //@extend %flexbox;
 }
 #jumbotron {
   padding-bottom: 4rem;
@@ -156,7 +155,7 @@ header {
     top: 0.5rem;
   }
   #mission-statement {
-    background: $orange;//rgba(255,40,0,0.7);
+    background: $orange;
     border-top: 2px solid $white;
     border-bottom: 2px solid $white;
     color: $white;
@@ -219,7 +218,6 @@ header {
     text-align: center;
     padding: 1rem;
     p {
-      //background: green;
       font-size: 1rem;
     }
     h3,  i {
