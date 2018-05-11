@@ -391,8 +391,12 @@
       font-size: 2rem;
     }
   }
+  .evt-progress-bar {
+    width: 100%;
+  }
   .event-info {
     .event-container {
+      width: 100%;
       .evt-time {
         font-size: 1.25rem;
       }
