@@ -916,7 +916,7 @@ header {
         margin: auto;
       }
     }
-    #hidden-text {
+    .popUpMessage {
       background-color: $white;
       color: $yellow;
       display: none;
@@ -925,6 +925,12 @@ header {
       padding: 1rem;
       text-align: center;
       @include border-radius(25px);
+    }
+    #errorMessage {
+      background-color: $white;
+      color: $orange;
+      margin-bottom: 1rem;
+      margin-top: 0;
     }
   }
 }
