@@ -8,6 +8,29 @@ var name;
 var progressBar = document.getElementById("backpack-evt");
 var textValue = document.getElementById("vol-number");
 
+//Form Validation
+function validateForm() {
+  var errorMessage = "";
+  var phoneRegex = /^\d{10}$/;
+  var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  if(phoneRegex.test(phone) == false) {
+    errorMessage += "Invalid Phone Number<br>";
+    document.getElementById("errorMessage").innerHTML = errorMessage;
+    document.getElementById("errorMessage").style.display = "block";
+  }
+  if(emailRegex.test(email) == false) {
+    errorMessage += "Invalid Email<br>";
+    document.getElementById("errorMessage").innerHTML = errorMessage;
+    document.getElementById("errorMessage").style.display = "block";
+  }
+  if(emailRegex.test(email) == true && phoneRegex.test(phone) == true) {
+    document.getElementById("errorMessage").style.display = "none";
+    submit();
+  }
+}
+
 //When the Form is Submitted
 function submit() {
   name = document.getElementById("name").value;
