@@ -16,12 +16,12 @@ function validateForm() {
   var phone = document.getElementById("phone").value;
   var email = document.getElementById("email").value;
   if(phoneRegex.test(phone) == false) {
-    errorMessage += "Invalid Phone Number<br>";
+    errorMessage += "<b>- Invalid Phone Number</b>: Please make sure your phone number is 10 digits and doesn't include any symbols or spaces.<br>";
     document.getElementById("errorMessage").innerHTML = errorMessage;
     document.getElementById("errorMessage").style.display = "block";
   }
   if(emailRegex.test(email) == false) {
-    errorMessage += "Invalid Email<br>";
+    errorMessage += "<b>- Invalid Email</b><br>";
     document.getElementById("errorMessage").innerHTML = errorMessage;
     document.getElementById("errorMessage").style.display = "block";
   }
