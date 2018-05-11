@@ -113,10 +113,8 @@
     }
   }
   #past-events {
-    flex-direction: column;
-    height: 50rem;
     .event-container {
-      height: 33.3%;
+      height: 100%;
       width: 100%;
       .inner-text {
         padding-top: 0.5rem;
@@ -343,9 +341,6 @@
   }
   #how-to-help {
     height: 80rem;
-  }
-  #past-events {
-    height: 60rem;
   }
   #donate-sect {
     #dnt-btn-contianer {
