@@ -39,6 +39,7 @@ function submit() {
     hiddenMessage.textContent = "Thank you " + name + ", but we have plenty of volunteers! Try signing up for a different event!";
     hiddenMessage.style.display = "block";
   }
+  //Reset Input Elements
   document.getElementById("name").value = "";
   document.getElementById("phone").value = "";
   document.getElementById("email").value = "";
